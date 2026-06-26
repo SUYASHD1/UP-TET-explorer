@@ -1047,26 +1047,23 @@ export function executeProgressReset() {
 // Notes
 export function toggleNoteEditor(sig) {
     if (!stateRef) return;
-    
-    // Find the question to get context
-    const q = stateRef.questions.find(item => {
-        const itemSig = `${item.pdf_name || ''}_${item.page || 0}_${item.col_idx || 0}_${item.id || ''}_${item.text || ''}`;
-        return itemSig === sig;
-    });
 
-    if (!q) return;
+    // Find the question using the same signature function used during render
+    const q = stateRef.questions.find(item => stateRef.config.getSignature(item) === sig);
 
     currentEditingSig = sig;
 
     // Find card elements to extract the relative question number displayed in UI
     const noteContainer = document.getElementById(`note-container-${sig}`);
     const cardElement = noteContainer ? noteContainer.closest('.q-card') : null;
-    const qBadgeText = cardElement ? cardElement.querySelector('.q-number-badge').textContent : `Q`;
+    const qBadgeText = cardElement ? cardElement.querySelector('.q-number-badge').textContent : 'Q';
 
     // Setup modal contents
     if (DOM.noteModalTitle) DOM.noteModalTitle.textContent = `Edit Study Notes`;
     if (DOM.noteModalQBadge) DOM.noteModalQBadge.textContent = qBadgeText;
-    if (DOM.noteModalQText) DOM.noteModalQText.innerHTML = stateRef.config.getQuestionText(q);
+    if (DOM.noteModalQText) {
+        DOM.noteModalQText.innerHTML = q ? stateRef.config.getQuestionText(q) : '';
+    }
     if (DOM.noteModalTextarea) {
         DOM.noteModalTextarea.value = stateRef.notes[sig] || '';
     }
