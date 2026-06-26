@@ -34,6 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 q.clean_text = q.text;
                 q.clean_options = q.options;
                 
+                // Generate a stable and 100% unique signature for each question
+                const sigStr = `${q.pdf_name || ''}_${q.page || 0}_${q.col_idx || 0}_${q.id || ''}_${q.text || ''}`;
+                let hash = 0;
+                for (let i = 0; i < sigStr.length; i++) {
+                    const char = sigStr.charCodeAt(i);
+                    hash = ((hash << 5) - hash) + char;
+                    hash = hash & hash;
+                }
+                q.signature = 'q_' + Math.abs(hash).toString(36) + '_' + q.id;
+
                 // Map fields to metadata
                 q.metadata = {
                     core_branch: q.paper_section || q.section || 'General',

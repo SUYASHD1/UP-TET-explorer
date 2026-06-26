@@ -1367,7 +1367,7 @@ export function openGoogleAI(sig) {
     const opts = stateRef.config.getOptions(q);
     const prompt = stateRef.config.cleanPromptText(`${qText} (A) ${opts.A} (B) ${opts.B} (C) ${opts.C} (D) ${opts.D}`);
     const url = `https://www.google.com/search?q=${encodeURIComponent(prompt)}`;
-    window.open(url, "GoogleAIWindow", "width=850,height=900,left=200,top=100,resizable=yes,scrollbars=yes");
+    window.open(url, "_blank");
 }
 
 // Copy clipboard
