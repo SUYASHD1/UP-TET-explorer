@@ -313,6 +313,24 @@
         </div>
     </div>
 
+    <!-- Full-Screen Note Editor Modal -->
+    <div class="modal" id="note-editor-modal">
+        <div class="modal-content">
+            <div class="modal-title" style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--accent-color); margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between;">
+                <span id="note-modal-title">Edit Study Notes</span>
+                <span id="note-modal-q-badge" class="q-number-badge">Q1</span>
+            </div>
+            <div id="note-modal-q-text" style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 1rem; max-height: 80px; overflow-y: auto; border-left: 2px solid var(--accent-color); padding-left: 0.5rem; font-style: italic;">
+                Question text goes here...
+            </div>
+            <textarea id="note-modal-textarea" style="flex: 1; width: 100%; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-primary); padding: 1rem; border-radius: 12px; font-family: var(--font-body); font-size: 1.05rem; line-height: 1.6; resize: none; margin-bottom: 1.25rem; outline: none; transition: var(--transition-smooth);" placeholder="Add your study notes here (Markdown & LaTeX supported)..."></textarea>
+            <div class="modal-actions" style="display: flex; gap: 1rem;">
+                <button class="btn btn-secondary" onclick="closeNoteEditorModal()" style="flex: 1; justify-content: center; display: flex; align-items: center;">Cancel</button>
+                <button class="btn btn-primary" onclick="executeSaveNoteModal()" style="flex: 1; justify-content: center; display: flex; align-items: center; background-color: var(--accent-color); border-color: var(--accent-color);">Save Note</button>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="js/main.js"></script>
 </body>
 </html>

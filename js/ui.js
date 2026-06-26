@@ -4,6 +4,7 @@
 import { debouncedSync, uploadToGist, connectGitHub, disconnectGitHub, resolveSync } from './sync.js';
 
 let stateRef = null;
+let currentEditingSig = null;
 
 // Helper to safely render/refresh Lucide icons with a DOM settle delay
 export function refreshIcons() {
@@ -46,6 +47,13 @@ export function initUI(state) {
     DOM.sectionList = document.getElementById('section-list');
     DOM.linkToggleBtn = document.getElementById('link-toggle-btn');
     DOM.linkToggleIcon = document.getElementById('link-toggle-icon');
+
+    // Note Modal DOM Elements
+    DOM.noteEditorModal = document.getElementById('note-editor-modal');
+    DOM.noteModalTitle = document.getElementById('note-modal-title');
+    DOM.noteModalQBadge = document.getElementById('note-modal-q-badge');
+    DOM.noteModalQText = document.getElementById('note-modal-q-text');
+    DOM.noteModalTextarea = document.getElementById('note-modal-textarea');
 
     // Register event listeners
     if (DOM.searchInput) DOM.searchInput.addEventListener('input', applyFilters);
@@ -116,6 +124,9 @@ export function initUI(state) {
         if (DOM.renameSectionModal && e.target === DOM.renameSectionModal) {
             closeRenameSectionModal();
         }
+        if (DOM.noteEditorModal && e.target === DOM.noteEditorModal) {
+            closeNoteEditorModal();
+        }
         if (!e.target.closest('.dropdown-container')) {
             document.querySelectorAll('.dropdown-menu').forEach(el => el.classList.remove('active'));
         }
@@ -148,6 +159,8 @@ function bindGlobals() {
     window.clearNote = clearNote;
     window.editNote = editNote;
     window.cancelNoteEdit = cancelNoteEdit;
+    window.closeNoteEditorModal = closeNoteEditorModal;
+    window.executeSaveNoteModal = executeSaveNoteModal;
 
     // Tags
     window.toggleTagEditor = toggleTagEditor;
@@ -465,14 +478,6 @@ export function renderNextBatch() {
                 </div>
                 <!-- Rendered Markdown + KaTeX Notes -->
                 <div id="note-display-${sig}" class="note-display-content" style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.6; display: ${hasNote ? 'block' : 'none'};"></div>
-                <!-- Textarea editor -->
-                <div id="note-edit-${sig}" style="display: ${hasNote ? 'none' : 'block'};">
-                    <textarea id="note-textarea-${sig}" class="note-textarea" placeholder="Add your study notes here (Markdown & LaTeX supported)...">${noteVal}</textarea>
-                    <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.5rem;">
-                        <button onclick="cancelNoteEdit('${sig}')" class="btn-secondary" style="padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem; cursor: pointer; background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary);">Cancel</button>
-                        <button onclick="saveNote('${sig}', document.getElementById('note-textarea-${sig}').value)" class="btn-primary" style="padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem; cursor: pointer; background: #f59e0b; border: none; color: white;">Save</button>
-                    </div>
-                </div>
             </div>
 
             <div class="tag-editor-container" id="tag-editor-${sig}" style="display: none; margin-top: 0.75rem; background: rgba(var(--accent-rgb), 0.05); border: 1px solid rgba(var(--accent-rgb), 0.2); border-radius: 10px; padding: 0.75rem; flex-direction: column; gap: 0.75rem;">
@@ -1040,60 +1045,61 @@ export function executeProgressReset() {
 }
 
 // Notes
-// Notes
 export function toggleNoteEditor(sig) {
-    const container = document.getElementById(`note-container-${sig}`);
-    if (!container) return;
+    if (!stateRef) return;
     
-    if (container.style.display === 'none') {
-        container.style.display = 'block';
-        const hasNote = !!(stateRef.notes && stateRef.notes[sig]);
-        const display = document.getElementById(`note-display-${sig}`);
-        const editBox = document.getElementById(`note-edit-${sig}`);
-        const textarea = document.getElementById(`note-textarea-${sig}`);
-        
-        if (hasNote) {
-            if (display) display.style.display = 'block';
-            if (editBox) editBox.style.display = 'none';
-        } else {
-            if (display) display.style.display = 'none';
-            if (editBox) editBox.style.display = 'block';
-            if (textarea) {
-                textarea.value = '';
-                textarea.focus();
-            }
+    // Find the question to get context
+    const q = stateRef.questions.find(item => {
+        const itemSig = `${item.pdf_name || ''}_${item.page || 0}_${item.col_idx || 0}_${item.id || ''}_${item.text || ''}`;
+        return itemSig === sig;
+    });
+
+    if (!q) return;
+
+    currentEditingSig = sig;
+
+    // Find card elements to extract the relative question number displayed in UI
+    const noteContainer = document.getElementById(`note-container-${sig}`);
+    const cardElement = noteContainer ? noteContainer.closest('.q-card') : null;
+    const qBadgeText = cardElement ? cardElement.querySelector('.q-number-badge').textContent : `Q`;
+
+    // Setup modal contents
+    if (DOM.noteModalTitle) DOM.noteModalTitle.textContent = `Edit Study Notes`;
+    if (DOM.noteModalQBadge) DOM.noteModalQBadge.textContent = qBadgeText;
+    if (DOM.noteModalQText) DOM.noteModalQText.innerHTML = stateRef.config.getQuestionText(q);
+    if (DOM.noteModalTextarea) {
+        DOM.noteModalTextarea.value = stateRef.notes[sig] || '';
+    }
+
+    // Show modal
+    if (DOM.noteEditorModal) {
+        DOM.noteEditorModal.classList.add('active');
+        if (DOM.noteModalTextarea) {
+            DOM.noteModalTextarea.focus();
         }
-    } else {
-        container.style.display = 'none';
     }
 }
 
 export function editNote(sig) {
-    const display = document.getElementById(`note-display-${sig}`);
-    const editBox = document.getElementById(`note-edit-${sig}`);
-    const textarea = document.getElementById(`note-textarea-${sig}`);
-    
-    if (display) display.style.display = 'none';
-    if (editBox) editBox.style.display = 'block';
-    if (textarea) {
-        textarea.value = stateRef.notes[sig] || '';
-        textarea.focus();
-    }
+    toggleNoteEditor(sig);
 }
 
 export function cancelNoteEdit(sig) {
-    const hasNote = !!(stateRef.notes && stateRef.notes[sig]);
-    const container = document.getElementById(`note-container-${sig}`);
-    if (!container) return;
+    // Left as stub for backward compatibility
+}
 
-    if (hasNote) {
-        const display = document.getElementById(`note-display-${sig}`);
-        const editBox = document.getElementById(`note-edit-${sig}`);
-        if (display) display.style.display = 'block';
-        if (editBox) editBox.style.display = 'none';
-    } else {
-        container.style.display = 'none';
+export function closeNoteEditorModal() {
+    if (DOM.noteEditorModal) {
+        DOM.noteEditorModal.classList.remove('active');
     }
+    currentEditingSig = null;
+}
+
+export function executeSaveNoteModal() {
+    if (!currentEditingSig) return;
+    const noteVal = DOM.noteModalTextarea ? DOM.noteModalTextarea.value : '';
+    saveNote(currentEditingSig, noteVal);
+    closeNoteEditorModal();
 }
 
 export function saveNote(sig, value) {
@@ -1109,43 +1115,45 @@ export function saveNote(sig, value) {
     updateStats();
     
     const noteContainer = document.getElementById(`note-container-${sig}`);
-    const cardElement = noteContainer.closest('.q-card');
-    
-    let badgeRow = cardElement.querySelector('.badge-row');
-    let existingIndicator = badgeRow.querySelector('.note-indicator-badge');
-    const noteBtn = cardElement.querySelector('.note-btn');
+    if (noteContainer) {
+        const cardElement = noteContainer.closest('.q-card');
+        let badgeRow = cardElement.querySelector('.badge-row');
+        let existingIndicator = badgeRow.querySelector('.note-indicator-badge');
+        const noteBtn = cardElement.querySelector('.note-btn');
 
-    if (trimmedVal) {
-        if (!existingIndicator) {
-            const badge = document.createElement('span');
-            badge.className = 'note-indicator-badge';
-            badge.style.cssText = "background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.25rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 0.25rem;";
-            badge.innerHTML = `<i data-lucide="sticky-note" style="width: 12px; height: 12px;"></i> Has Note`;
-            badgeRow.appendChild(badge);
-            refreshIcons();
-        }
-        noteBtn.classList.add('active');
-        noteBtn.style.borderColor = '#f59e0b';
-        noteBtn.style.color = '#f59e0b';
+        if (trimmedVal) {
+            if (!existingIndicator) {
+                const badge = document.createElement('span');
+                badge.className = 'note-indicator-badge';
+                badge.style.cssText = "background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.25rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 0.25rem;";
+                badge.innerHTML = `<i data-lucide="sticky-note" style="width: 12px; height: 12px;"></i> Has Note`;
+                badgeRow.appendChild(badge);
+                refreshIcons();
+            }
+            if (noteBtn) {
+                noteBtn.classList.add('active');
+                noteBtn.style.borderColor = '#f59e0b';
+                noteBtn.style.color = '#f59e0b';
+            }
 
-        // Update display and switch view
-        const display = document.getElementById(`note-display-${sig}`);
-        const editBox = document.getElementById(`note-edit-${sig}`);
-        if (display) {
-            display.innerHTML = getParsedNote(trimmedVal);
-            triggerMathRender(display);
-            display.style.display = 'block';
+            const display = document.getElementById(`note-display-${sig}`);
+            if (display) {
+                display.innerHTML = getParsedNote(trimmedVal);
+                triggerMathRender(display);
+                display.style.display = 'block';
+            }
+            noteContainer.style.display = 'block';
+        } else {
+            if (existingIndicator) {
+                existingIndicator.remove();
+            }
+            if (noteBtn) {
+                noteBtn.classList.remove('active');
+                noteBtn.style.borderColor = 'var(--border-color)';
+                noteBtn.style.color = 'var(--text-secondary)';
+            }
+            noteContainer.style.display = 'none';
         }
-        if (editBox) editBox.style.display = 'none';
-        noteContainer.style.display = 'block';
-    } else {
-        if (existingIndicator) {
-            existingIndicator.remove();
-        }
-        noteBtn.classList.remove('active');
-        noteBtn.style.borderColor = 'var(--border-color)';
-        noteBtn.style.color = 'var(--text-secondary)';
-        noteContainer.style.display = 'none';
     }
     
     debouncedSync(stateRef, () => {
@@ -1155,9 +1163,9 @@ export function saveNote(sig, value) {
 }
 
 export function clearNote(sig) {
-    const textarea = document.getElementById(`note-textarea-${sig}`);
-    if (textarea) textarea.value = '';
-    saveNote(sig, '');
+    if (confirm("Are you sure you want to clear this note?")) {
+        saveNote(sig, '');
+    }
 }
 
 // Tag Fix metadata overrides
