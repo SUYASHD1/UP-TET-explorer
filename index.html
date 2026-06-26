@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPTET Question Bank Explorer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMath()"></script>
+    <!-- Markdown Parser (marked.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- App Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        window.renderMath = function() {
+            if (typeof renderMathInElement === 'function') {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false},
+                        {left: '\\[', right: '\\]', display: true}
+                    ],
+                    throwOnError: false
+                });
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i data-lucide="library"></i>
+                </div>
+                <div>
+                    <h1>UPTET Explorer</h1>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="theme-btn" id="sync-settings-btn" title="Cloud Sync Settings">
+                    <i data-lucide="cloud"></i>
+                </button>
+                <div class="stats-badge" id="stats-badge">
+                    <i data-lucide="database"></i>
+                    <span id="loaded-count">0 / 0 Questions</span>
+                </div>
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cloud Sync Modal -->
+    <div id="sync-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i data-lucide="cloud" style="margin-right: 0.5rem; color: var(--accent-color);"></i> GitHub Cloud Sync</h2>
+                <button class="close-btn" id="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.5rem;">
+                    Sync your completed and hidden questions across devices using your GitHub account.
+                </p>
+                <div class="input-group">
+                    <label for="github-token">GitHub Access Token</label>
+                    <input type="password" id="github-token" placeholder="gho_xxxxxxxxxxxxxxxxxxxx">
+                    <small class="tip">
+                        Run <code style="background: rgba(0,0,0,0.1); padding: 0.1rem 0.3rem; border-radius: 4px; color: var(--accent-color); font-family: monospace;">gh auth token</code> in your CLI/terminal to copy your active token!
+                    </small>
+                </div>
+                
+                <div id="sync-info" class="sync-info" style="display: none;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--success-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                        <i data-lucide="check-circle-2" style="width: 18px; height: 18px;"></i> Cloud Connected
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary); word-break: break-all;">
+                        Gist ID: <span id="gist-id-display">-</span>
+                    </div>
+                </div>
+
+                <div class="modal-actions" id="sync-modal-actions">
+                    <button class="btn btn-secondary" id="disconnect-btn" style="display: none;" onclick="disconnectGitHub()">Disconnect</button>
+                    <button class="btn btn-primary" id="connect-btn" onclick="connectGitHub()">Connect & Sync</button>
+                </div>
+                
+                <!-- Conflict UI -->
+                <div id="sync-conflict-ui" style="display: none; background-color: rgba(var(--accent-rgb), 0.05); border: 1px solid rgba(var(--accent-rgb), 0.2); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                    <h3 style="color: var(--accent-color); font-size: 1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-triangle" style="width: 18px; height: 18px;"></i> Existing Backup Found!</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">We found previous progress saved on GitHub. Which data would you like to keep?</p>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <button class="btn btn-primary" onclick="resolveSync('merge')" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; background-color: var(--success-color); border-color: var(--success-color);"><i data-lucide="git-merge" style="width: 16px; height: 16px;"></i> Merge Local & Cloud Data (Recommended)</button>
+                        <button class="btn btn-secondary" onclick="resolveSync('pull')" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;"><i data-lucide="download" style="width: 16px; height: 16px;"></i> Pull from Cloud (Overwrite Local)</button>
+                        <button class="btn btn-secondary" onclick="resolveSync('push')" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; border-color: var(--accent-color); color: var(--text-primary);"><i data-lucide="upload" style="width: 16px; height: 16px;"></i> Push Local Data (Overwrite Cloud)</button>
+                        <button class="btn btn-secondary" onclick="resolveSync('cancel')" style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">Cancel Connection</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Workspace Grid -->
+    <div class="workspace-layout">
+        
+        <!-- Sidebar Navigation (Subject list & Progress stats) -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <div class="widget-title">
+                    <i data-lucide="pie-chart" style="color: var(--accent-color)"></i> Study Progress
+                </div>
+                <div class="progress-ring-container">
+                    <div class="progress-percentage" id="progress-percentage">0%</div>
+                    <div>
+                        <div class="progress-meta" id="progress-counts">Completed: 0 / 0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <div class="widget-title" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="folder-heart" style="color: var(--accent-color)"></i>
+                        <span>Sections</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.35rem;">
+                        <button id="link-toggle-btn" onclick="toggleSectionLinkMode()" title="Toggle Section Link Mode" style="background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 0.25rem; border-radius: 6px; display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth);">
+                            <i data-lucide="link" id="link-toggle-icon" style="width: 18px; height: 18px;"></i>
+                        </button>
+                        <button class="add-section-btn" onclick="openAddSectionModal()" title="Add Custom Section" style="background: none; border: none; color: var(--accent-color); cursor: pointer; padding: 0.25rem; border-radius: 6px; display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth);">
+                            <i data-lucide="plus-circle" style="width: 18px; height: 18px;"></i>
+                        </button>
+                    </div>
+                </div>
+                <ul class="section-list" id="section-list">
+                    <!-- Injected dynamically in ui.js -->
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <div class="widget-title">
+                    <i data-lucide="layers" style="color: var(--accent-color)"></i> Core Subjects
+                </div>
+                <ul class="category-list" id="branches-list">
+                    <li class="category-item active" id="branch-all" onclick="filterByBranch('all')">
+                        <span>All Subjects</span>
+                        <span class="category-count" id="branch-count-all">0</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Question Grid -->
+        <main class="dashboard-content">
+            
+            <!-- Filter Controls Card -->
+            <div class="controls-card">
+                <div class="search-row">
+                    <div class="search-wrapper">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" id="search-bar" class="search-input" placeholder="Search questions, keywords, or topics...">
+                    </div>
+                    <select id="exam-filter" class="filter-select">
+                        <option value="all">All Subjects</option>
+                    </select>
+                    <select id="year-filter" class="filter-select">
+                        <option value="all">All Years</option>
+                    </select>
+                </div>
+
+                <!-- Bloom's Taxonomy Level Selector -->
+                <div class="bloom-tabs" id="bloom-tabs-container">
+                    <button class="bloom-tab active" onclick="filterByBloom('all')" id="bloom-tab-all">All Papers</button>
+                </div>
+
+                <!-- Question Status & Action Row -->
+                <div class="status-row">
+                    <div class="status-filters">
+                        <button class="status-btn active" id="status-btn-active" onclick="setStatusFilter('active')">
+                            <i data-lucide="eye"></i> Active (<span id="active-badge-count">0</span>)
+                        </button>
+                        <button class="status-btn" id="status-btn-completed" onclick="setStatusFilter('completed')">
+                            <i data-lucide="check-circle-2"></i> Completed (<span id="completed-badge-count">0</span>)
+                        </button>
+                        <button class="status-btn" id="status-btn-notes" onclick="setStatusFilter('notes')">
+                            <i data-lucide="sticky-note"></i> Notes (<span id="notes-badge-count">0</span>)
+                        </button>
+                    </div>
+                    <button class="reset-progress-btn" onclick="clearAllProgress()">
+                        <i data-lucide="rotate-ccw"></i> Reset Progress
+                    </button>
+                </div>
+            </div>
+
+            <!-- Questions Container -->
+            <div id="loader" class="spinner"></div>
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <i data-lucide="search-code" style="width: 48px; height: 48px; color: var(--text-secondary)"></i>
+                <h3>No Questions Found</h3>
+                <p>Try clearing some filters or search query terms.</p>
+            </div>
+            <div class="questions-grid" id="questions-container"></div>
+            <div id="load-more-trigger"></div>
+        </main>
+    </div>
+
+    <!-- Add Custom Section Modal -->
+    <div class="modal" id="add-section-modal">
+        <div class="modal-content" style="max-width: 400px; padding: 1.5rem;">
+            <div class="modal-title" style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="folder-plus" style="color: var(--accent-color)"></i>
+                <span>Create Custom Section</span>
+            </div>
+            <input type="text" class="modal-input" id="new-section-name" placeholder="e.g., Hard Questions, Revise Later">
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeAddSectionModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="createCustomSection()">Create Section</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Danger/Reset Modal -->
+    <div class="modal" id="reset-confirm-modal">
+        <div class="modal-content" style="max-width: 450px; padding: 1.75rem;">
+            <div class="modal-title" style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: #ef4444; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="alert-triangle"></i>
+                <span>Reset All Progress</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.5;">
+                This will permanently erase your local study progress and metadata:
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.85rem; color: var(--text-primary); display: flex; flex-direction: column; gap: 0.5rem;">
+                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="color: #ef4444; font-weight: 600;">✗</span>
+                    <span id="reset-completed-count">0</span> completed marks
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="color: #ef4444; font-weight: 600;">✗</span>
+                    <span id="reset-notes-count">0</span> study notes
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="color: #ef4444; font-weight: 600;">✗</span>
+                    <span id="reset-answers-count">0</span> correct answers saved
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="color: #ef4444; font-weight: 600;">✗</span>
+                    <span id="reset-sections-count">0</span> custom sections + all tags
+                </li>
+            </ul>
+            
+            <button class="btn btn-secondary" onclick="downloadBackup()" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1.25rem; background: rgba(var(--accent-rgb), 0.05); border: 1px dashed var(--accent-color); color: var(--accent-color); padding: 0.75rem;">
+                <i data-lucide="download" style="width: 18px; height: 18px;"></i>
+                <span>Download Backup First</span>
+            </button>
+
+            <div style="margin-bottom: 1.25rem;">
+                <label style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); display: block; margin-bottom: 0.5rem;">Type <span style="color: var(--text-primary); font-weight: 700;">RESET</span> to confirm:</label>
+                <input type="text" class="modal-input" id="reset-confirm-input" placeholder="RESET" style="margin-bottom: 0;">
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeResetModal()">Cancel</button>
+                <button class="btn btn-primary" id="confirm-reset-btn" onclick="executeProgressReset()" style="background-color: #ef4444; border-color: #ef4444;" disabled>Confirm Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Section Modal -->
+    <div class="modal" id="delete-section-modal">
+        <div class="modal-content" style="max-width: 400px; padding: 1.5rem;">
+            <div class="modal-title" style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: #ef4444; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="trash-2"></i>
+                <span>Delete Section</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.5;">
+                Choose where the questions from section <strong id="delete-section-name" style="color: var(--text-primary);"></strong> should go:
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.25rem;">
+                <button class="btn btn-secondary" onclick="executeDeleteSection(false)" style="justify-content: center; display: flex; align-items: center; gap: 0.5rem; border-color: var(--accent-color); color: var(--accent-color); padding: 0.75rem;">
+                    <i data-lucide="eye" style="width: 18px; height: 18px;"></i> Keep as Active
+                </button>
+                <button class="btn btn-secondary" onclick="executeDeleteSection(true)" style="justify-content: center; display: flex; align-items: center; gap: 0.5rem; border-color: var(--success-color); color: var(--success-color); padding: 0.75rem;">
+                    <i data-lucide="check-circle-2" style="width: 18px; height: 18px;"></i> Move to Completed
+                </button>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeDeleteSectionModal()" style="width: 100%;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rename Section Modal -->
+    <div class="modal" id="rename-section-modal">
+        <div class="modal-content" style="max-width: 400px; padding: 1.5rem;">
+            <div class="modal-title" style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--accent-color); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="edit-3"></i>
+                <span>Rename Section</span>
+            </div>
+            <input type="text" class="modal-input" id="rename-section-input" placeholder="Enter new section name...">
+            <div class="modal-actions" style="margin-top: 1.25rem;">
+                <button class="btn btn-secondary" onclick="closeRenameSectionModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="executeRenameSection()">Rename</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
