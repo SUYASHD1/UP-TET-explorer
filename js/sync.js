@@ -6,6 +6,32 @@ let syncTimeout = null;
 let pendingSyncData = null;
 let pendingToken = null;
 let pendingGistId = null;
+let isSyncing = false;
+
+/**
+ * Updates the visual sync status of the sync-settings-btn in the header
+ */
+function updateSyncStatus(status) {
+    const btn = document.getElementById('sync-settings-btn');
+    if (!btn) return;
+    
+    btn.classList.remove('syncing', 'success', 'error');
+    
+    if (status === 'syncing') {
+        btn.classList.add('syncing');
+        btn.title = "Syncing with cloud...";
+    } else if (status === 'success') {
+        btn.classList.add('success');
+        btn.title = "Sync successful!";
+        setTimeout(() => {
+            btn.classList.remove('success');
+            btn.title = "Cloud Sync Settings";
+        }, 3000);
+    } else if (status === 'error') {
+        btn.classList.add('error');
+        btn.title = "Sync failed. Click to check settings.";
+    }
+}
 
 /**
  * 30-day Last-Write-Wins Merge logic
@@ -26,6 +52,8 @@ export function mergeDatasets(local, remote) {
     const remoteTagOverrides = remote.tagOverrides || remote.tag_overrides || {};
     const localCorrectAnswers = local.correctAnswers || local.correct_answers || {};
     const remoteCorrectAnswers = remote.correctAnswers || remote.correct_answers || {};
+    const localTags = local.customTags || {};
+    const remoteTags = remote.customTags || {};
 
     const allSigs = new Set([
         ...Object.keys(local.timestamps || {}),
@@ -34,12 +62,16 @@ export function mergeDatasets(local, remote) {
         ...(local.deleted || []), ...(remote.deleted || []),
         ...Object.keys(local.notes || {}), ...Object.keys(remote.notes || {}),
         ...Object.keys(localTagOverrides), ...Object.keys(remoteTagOverrides),
-        ...Object.keys(localCorrectAnswers), ...Object.keys(remoteCorrectAnswers)
+        ...Object.keys(localCorrectAnswers), ...Object.keys(remoteCorrectAnswers),
+        ...Object.keys(localTags), ...Object.keys(remoteTags)
     ]);
 
     const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
 
     allSigs.forEach(sig => {
+        // Skip metadata/sections timestamp
+        if (sig === '_sections') return;
+
         const localTime = (local.timestamps && local.timestamps[sig]) || 0;
         const remoteTime = (remote.timestamps && remote.timestamps[sig]) || 0;
 
@@ -51,11 +83,17 @@ export function mergeDatasets(local, remote) {
             const tagsVal = localTagOverrides[sig] || remoteTagOverrides[sig];
             const ansVal = localCorrectAnswers[sig] || remoteCorrectAnswers[sig];
 
+            const unionTags = new Set([
+                ...(localTags[sig] || []),
+                ...(remoteTags[sig] || [])
+            ]);
+
             if (isCompleted) merged.completed.push(sig);
             if (isDeleted) merged.deleted.push(sig);
             if (noteVal) merged.notes[sig] = noteVal;
             if (tagsVal) merged.tagOverrides[sig] = tagsVal;
             if (ansVal) merged.correctAnswers[sig] = ansVal;
+            if (unionTags.size > 0) merged.customTags[sig] = Array.from(unionTags);
             return;
         } else if (localTime >= remoteTime) {
             winner = 'local';
@@ -66,6 +104,7 @@ export function mergeDatasets(local, remote) {
         const source = winner === 'local' ? local : remote;
         const sourceTagOverrides = winner === 'local' ? localTagOverrides : remoteTagOverrides;
         const sourceCorrectAnswers = winner === 'local' ? localCorrectAnswers : remoteCorrectAnswers;
+        const sourceTags = winner === 'local' ? localTags : remoteTags;
         const winnerTime = winner === 'local' ? localTime : remoteTime;
 
         const isCompleted = source.completed && source.completed.includes(sig);
@@ -73,37 +112,45 @@ export function mergeDatasets(local, remote) {
         const noteVal = source.notes && source.notes[sig];
         const tagsVal = sourceTagOverrides[sig];
         const ansVal = sourceCorrectAnswers[sig];
+        const tagsList = sourceTags[sig];
 
         if (isCompleted) merged.completed.push(sig);
         if (isDeleted) merged.deleted.push(sig);
         if (noteVal) merged.notes[sig] = noteVal;
         if (tagsVal) merged.tagOverrides[sig] = tagsVal;
         if (ansVal) merged.correctAnswers[sig] = ansVal;
+        if (tagsList) merged.customTags[sig] = tagsList;
 
         if (winnerTime > cutoff) {
             merged.timestamps[sig] = winnerTime;
         }
     });
 
-    const sectionsMap = new Map();
-    (local.customSections || []).forEach(s => {
-        if (s && s.id) sectionsMap.set(s.id, s);
-    });
-    (remote.customSections || []).forEach(s => {
-        if (s && s.id) sectionsMap.set(s.id, s);
-    });
-    merged.customSections = Array.from(sectionsMap.values());
+    // Merge custom sections list based on the '_sections' timestamp
+    const localSectionsTime = (local.timestamps && local.timestamps['_sections']) || 0;
+    const remoteSectionsTime = (remote.timestamps && remote.timestamps['_sections']) || 0;
 
-    const localTags = local.customTags || {};
-    const remoteTags = remote.customTags || {};
-    const allTagSigs = new Set([...Object.keys(localTags), ...Object.keys(remoteTags)]);
-    allTagSigs.forEach(sig => {
-        const unionTags = new Set([
-            ...(localTags[sig] || []),
-            ...(remoteTags[sig] || [])
-        ]);
-        merged.customTags[sig] = Array.from(unionTags);
-    });
+    if (localSectionsTime === 0 && remoteSectionsTime === 0) {
+        // Fallback to union if no timestamps
+        const sectionsMap = new Map();
+        (local.customSections || []).forEach(s => {
+            if (s && s.id) sectionsMap.set(s.id, s);
+        });
+        (remote.customSections || []).forEach(s => {
+            if (s && s.id) sectionsMap.set(s.id, s);
+        });
+        merged.customSections = Array.from(sectionsMap.values());
+    } else if (localSectionsTime >= remoteSectionsTime) {
+        merged.customSections = local.customSections || [];
+        if (localSectionsTime > cutoff) {
+            merged.timestamps['_sections'] = localSectionsTime;
+        }
+    } else {
+        merged.customSections = remote.customSections || [];
+        if (remoteSectionsTime > cutoff) {
+            merged.timestamps['_sections'] = remoteSectionsTime;
+        }
+    }
 
     return merged;
 }
@@ -120,10 +167,13 @@ export function debouncedSync(state, callback) {
  * Performs full fetch-merge-patch sync cycle
  */
 export async function performSync(state, callback) {
+    if (isSyncing) return;
     const token = localStorage.getItem('uptet_github_token');
     const gistId = localStorage.getItem('uptet_gist_id');
     if (!token || !gistId) return;
 
+    isSyncing = true;
+    updateSyncStatus('syncing');
     console.log("Syncing progress with GitHub Gist...");
     try {
         const response = await fetch(`https://api.github.com/gists/${gistId}`, {
@@ -164,13 +214,14 @@ export async function performSync(state, callback) {
             state.customSections = merged.customSections;
             state.customTags = merged.customTags;
 
-            state.saveCompleted();
-            state.saveDeleted();
-            state.saveNotes();
-            state.saveTagOverrides();
-            state.saveCorrectAnswers();
-            state.saveCustomSections();
-            state.saveCustomTags();
+            // Save back to local storage without triggering automated save loops
+            localStorage.setItem(state.config.storageKeys.completed, JSON.stringify(Array.from(state.completedSet)));
+            localStorage.setItem(state.config.storageKeys.deleted, JSON.stringify(Array.from(state.deletedSet)));
+            localStorage.setItem(state.config.storageKeys.notes, JSON.stringify(state.notes));
+            localStorage.setItem(state.config.storageKeys.tagOverrides, JSON.stringify(state.tagOverrides));
+            localStorage.setItem(state.config.storageKeys.correctAnswers, JSON.stringify(state.correctAnswers));
+            localStorage.setItem(state.config.storageKeys.customSections, JSON.stringify(state.customSections));
+            localStorage.setItem(state.config.storageKeys.customTags, JSON.stringify(state.customTags));
             localStorage.setItem(state.config.storageKeys.timestamps, JSON.stringify(state.timestamps));
 
             state.hiddenSet.clear();
@@ -193,9 +244,13 @@ export async function performSync(state, callback) {
                 })
             });
             console.log("GitHub sync successful.");
+            updateSyncStatus('success');
         }
     } catch (err) {
         console.error("Gist sync error:", err);
+        updateSyncStatus('error');
+    } finally {
+        isSyncing = false;
     }
 }
 
@@ -208,8 +263,9 @@ export async function uploadToGist(state) {
     if (!token || !gistId) return;
 
     const gistFile = state.config.gistFile;
+    updateSyncStatus('syncing');
     try {
-        await fetch(`https://api.github.com/gists/${gistId}`, {
+        const response = await fetch(`https://api.github.com/gists/${gistId}`, {
             method: 'PATCH',
             headers: {
                 'Authorization': `token ${token}`,
@@ -232,16 +288,20 @@ export async function uploadToGist(state) {
                 }
             })
         });
+        if (!response.ok) throw new Error("Upload failed");
         console.log("Cloud sync upload success.");
+        updateSyncStatus('success');
     } catch (err) {
         console.error("Cloud sync upload failed: ", err);
+        updateSyncStatus('error');
     }
 }
 
 /**
- * Connects GitHub Account
+ * Connects GitHub Account and automatically merges local and remote data seamlessly
  */
 export async function connectGitHub(state, token, uiElements, onConflict, onSuccess, onError) {
+    updateSyncStatus('syncing');
     try {
         const response = await fetch('https://api.github.com/gists', {
             headers: { 'Authorization': `token ${token}` }
@@ -260,22 +320,52 @@ export async function connectGitHub(state, token, uiElements, onConflict, onSucc
             const gistResponse = await fetch(`https://api.github.com/gists/${gistId}`, {
                 headers: { 'Authorization': `token ${token}` }
             });
-            const gistData = await gistResponse.json();
             
-            if (gistData.files[gistFile]) {
-                const content = gistData.files[gistFile].content;
-                const parsed = JSON.parse(content || '{"completed":[],"hidden":[],"notes":{},"tagOverrides":{},"correctAnswers":{},"deleted":[],"customSections":[],"customTags":{}}');
+            if (gistResponse.ok) {
+                const gistData = await gistResponse.json();
                 
-                if (parsed.hidden && parsed.hidden.length > 0) {
-                    state.migrateHiddenToCustomSection(parsed);
-                }
+                if (gistData.files[gistFile]) {
+                    const content = gistData.files[gistFile].content;
+                    const remote = JSON.parse(content || '{"completed":[],"hidden":[],"notes":{},"tagOverrides":{},"correctAnswers":{},"deleted":[],"customSections":[],"customTags":{}}');
+                    
+                    if (remote.hidden && remote.hidden.length > 0) {
+                        state.migrateHiddenToCustomSection(remote);
+                    }
 
-                pendingSyncData = parsed;
-                pendingToken = token;
-                pendingGistId = gistId;
-                
-                onConflict();
-                return;
+                    const local = {
+                        completed: Array.from(state.completedSet),
+                        deleted: Array.from(state.deletedSet),
+                        notes: state.notes,
+                        tagOverrides: state.tagOverrides,
+                        correctAnswers: state.correctAnswers,
+                        timestamps: state.timestamps,
+                        customSections: state.customSections,
+                        customTags: state.customTags
+                    };
+
+                    const merged = mergeDatasets(local, remote);
+
+                    state.completedSet = new Set(merged.completed);
+                    state.deletedSet = new Set(merged.deleted);
+                    state.notes = merged.notes;
+                    state.tagOverrides = merged.tagOverrides;
+                    state.correctAnswers = merged.correctAnswers;
+                    state.timestamps = merged.timestamps;
+                    state.customSections = merged.customSections;
+                    state.customTags = merged.customTags;
+
+                    localStorage.setItem(state.config.storageKeys.completed, JSON.stringify(Array.from(state.completedSet)));
+                    localStorage.setItem(state.config.storageKeys.deleted, JSON.stringify(Array.from(state.deletedSet)));
+                    localStorage.setItem(state.config.storageKeys.notes, JSON.stringify(state.notes));
+                    localStorage.setItem(state.config.storageKeys.tagOverrides, JSON.stringify(state.tagOverrides));
+                    localStorage.setItem(state.config.storageKeys.correctAnswers, JSON.stringify(state.correctAnswers));
+                    localStorage.setItem(state.config.storageKeys.customSections, JSON.stringify(state.customSections));
+                    localStorage.setItem(state.config.storageKeys.customTags, JSON.stringify(state.customTags));
+                    localStorage.setItem(state.config.storageKeys.timestamps, JSON.stringify(state.timestamps));
+
+                    state.hiddenSet.clear();
+                    localStorage.removeItem(state.config.storageKeys.hidden);
+                }
             }
         }
 
@@ -325,9 +415,10 @@ export async function connectGitHub(state, token, uiElements, onConflict, onSucc
         localStorage.setItem('uptet_github_token', token);
         localStorage.setItem('uptet_gist_id', gistId);
         
-        await uploadToGist(state);
+        updateSyncStatus('success');
         onSuccess();
     } catch (err) {
+        updateSyncStatus('error');
         onError(err);
     }
 }
@@ -341,6 +432,8 @@ export function disconnectGitHub(state, onSuccess) {
         localStorage.removeItem('uptet_gist_id');
         localStorage.removeItem(state.config.storageKeys.timestamps);
         state.timestamps = {};
+        const btn = document.getElementById('sync-settings-btn');
+        if (btn) btn.classList.remove('syncing', 'success', 'error');
         onSuccess();
     }
 }
@@ -370,13 +463,13 @@ export async function resolveSync(state, action, callback, onSuccess) {
         state.customSections = merged.customSections;
         state.customTags = merged.customTags;
 
-        state.saveCompleted();
-        state.saveDeleted();
-        state.saveNotes();
-        state.saveTagOverrides();
-        state.saveCorrectAnswers();
-        state.saveCustomSections();
-        state.saveCustomTags();
+        localStorage.setItem(state.config.storageKeys.completed, JSON.stringify(Array.from(state.completedSet)));
+        localStorage.setItem(state.config.storageKeys.deleted, JSON.stringify(Array.from(state.deletedSet)));
+        localStorage.setItem(state.config.storageKeys.notes, JSON.stringify(state.notes));
+        localStorage.setItem(state.config.storageKeys.tagOverrides, JSON.stringify(state.tagOverrides));
+        localStorage.setItem(state.config.storageKeys.correctAnswers, JSON.stringify(state.correctAnswers));
+        localStorage.setItem(state.config.storageKeys.customSections, JSON.stringify(state.customSections));
+        localStorage.setItem(state.config.storageKeys.customTags, JSON.stringify(state.customTags));
         localStorage.setItem(state.config.storageKeys.timestamps, JSON.stringify(state.timestamps));
         
         state.hiddenSet.clear();
@@ -393,13 +486,13 @@ export async function resolveSync(state, action, callback, onSuccess) {
         state.customSections = pendingSyncData.customSections || [];
         state.customTags = pendingSyncData.customTags || {};
         
-        state.saveCompleted();
-        state.saveDeleted();
-        state.saveNotes();
-        state.saveTagOverrides();
-        state.saveCorrectAnswers();
-        state.saveCustomSections();
-        state.saveCustomTags();
+        localStorage.setItem(state.config.storageKeys.completed, JSON.stringify(Array.from(state.completedSet)));
+        localStorage.setItem(state.config.storageKeys.deleted, JSON.stringify(Array.from(state.deletedSet)));
+        localStorage.setItem(state.config.storageKeys.notes, JSON.stringify(state.notes));
+        localStorage.setItem(state.config.storageKeys.tagOverrides, JSON.stringify(state.tagOverrides));
+        localStorage.setItem(state.config.storageKeys.correctAnswers, JSON.stringify(state.correctAnswers));
+        localStorage.setItem(state.config.storageKeys.customSections, JSON.stringify(state.customSections));
+        localStorage.setItem(state.config.storageKeys.customTags, JSON.stringify(state.customTags));
         localStorage.setItem(state.config.storageKeys.timestamps, JSON.stringify(state.timestamps));
         
         state.hiddenSet.clear();
@@ -407,8 +500,8 @@ export async function resolveSync(state, action, callback, onSuccess) {
 
         if (callback) callback();
     } else if (action === 'push') {
-        // If pushing local, we just overwrite remote with whatever is currently in local.
-        // We will save credentials first and then perform uploadToGist.
+        localStorage.setItem('uptet_github_token', pendingToken);
+        localStorage.setItem('uptet_gist_id', pendingGistId);
     } else if (action === 'cancel') {
         pendingSyncData = null;
         pendingToken = null;
@@ -416,8 +509,8 @@ export async function resolveSync(state, action, callback, onSuccess) {
         return false;
     }
 
-    localStorage.setItem('uptet_github_token', pendingToken);
-    localStorage.setItem('uptet_gist_id', pendingGistId);
+    localStorage.setItem('uptet_github_token', pendingToken || localStorage.getItem('uptet_github_token'));
+    localStorage.setItem('uptet_gist_id', pendingGistId || localStorage.getItem('uptet_gist_id'));
     
     pendingSyncData = null;
     pendingToken = null;

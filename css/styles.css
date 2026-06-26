@@ -1261,3 +1261,28 @@ h1 {
     width: 100%;
 }
 
+/* Cloud Sync Visual Status styling */
+@keyframes pulse-sync {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); color: var(--accent-color); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.theme-btn#sync-settings-btn svg {
+    transition: var(--transition-smooth);
+}
+
+.theme-btn#sync-settings-btn.syncing svg {
+    animation: pulse-sync 1.5s infinite ease-in-out;
+}
+
+.theme-btn#sync-settings-btn.success svg {
+    color: var(--success-color);
+    transform: scale(1.15);
+}
+
+.theme-btn#sync-settings-btn.error svg {
+    color: #ef4444;
+    transform: scale(1.15);
+}
+

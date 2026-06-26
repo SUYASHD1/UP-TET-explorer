@@ -73,6 +73,7 @@ export class DashboardState {
     }
 
     saveCustomSections() {
+        this.touchTimestamp('_sections');
         localStorage.setItem(this.config.storageKeys.customSections, JSON.stringify(this.customSections));
     }
 
