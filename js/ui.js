@@ -572,7 +572,7 @@ export function renderNextBatch() {
         `;
         DOM.container.appendChild(card);
         if (hasNote) {
-            const displayDiv = card.querySelector(`#note-display-${sig}`);
+            const displayDiv = card.querySelector(`[id="note-display-${sig}"]`);
             if (displayDiv) {
                 displayDiv.innerHTML = getParsedNote(noteVal);
             }
