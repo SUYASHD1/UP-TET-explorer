@@ -111,7 +111,7 @@
       "C": "10",
       "D": "9.5"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0001",
@@ -120,7 +120,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 5,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Data & Statistics",
       "median"
@@ -323,7 +323,7 @@
       "C": "geometr y",
       "D": "probability"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0002",
@@ -332,7 +332,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 6,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Data & Statistics",
       "probability"
@@ -575,7 +575,7 @@
       "C": "Article 45",
       "D": "Article 21A"
     },
-    "section": "CDP",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0008",
@@ -584,7 +584,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 12,
-    "paper_section": "CDP",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -949,7 +949,7 @@
       "C": "purer",
       "D": "precious"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0012",
@@ -958,7 +958,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 22,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "water",
       "Natural Resources (Science)"
@@ -1243,7 +1243,7 @@
       "C": "Four hours and five minutes",
       "D": "half an hour"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0014",
@@ -1252,7 +1252,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 24,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Measurement",
       "time"
@@ -1273,7 +1273,7 @@
       "C": "The work consumes all the time spend and day",
       "D": "The work needs aaditional time"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0014",
@@ -1282,7 +1282,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 24,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Measurement",
       "time"
@@ -1327,7 +1327,7 @@
       "C": "A man of leisure",
       "D": "An exhausted person"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0015",
@@ -1336,7 +1336,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 25,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Measurement",
       "time"
@@ -1767,7 +1767,7 @@
       "C": "15",
       "D": ""
     },
-    "section": "SCIENCE",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0024",
@@ -1776,7 +1776,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 34,
-    "paper_section": "SCIENCE",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Number System",
       "decimal"
@@ -2055,7 +2055,7 @@
       "C": "Sericulture",
       "D": "Agriculture"
     },
-    "section": "SCIENCE",
+    "section": "SOCIAL_STUDIES",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0026",
@@ -2064,7 +2064,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 36,
-    "paper_section": "SCIENCE",
+    "paper_section": "SOCIAL_STUDIES",
     "keyword_tags": [
       "agriculture",
       "Geography",
@@ -2601,7 +2601,7 @@
       "C": "Globe",
       "D": "None of the above"
     },
-    "section": "SCIENCE",
+    "section": "SOCIAL_STUDIES",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0034",
@@ -2610,7 +2610,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 62,
-    "paper_section": "SCIENCE",
+    "paper_section": "SOCIAL_STUDIES",
     "keyword_tags": [
       "globe",
       "Geography (SS)"
@@ -2799,7 +2799,7 @@
       "C": "",
       "D": "None of the above"
     },
-    "section": "SCIENCE",
+    "section": "CDP",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0037",
@@ -2808,7 +2808,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 65,
-    "paper_section": "SCIENCE",
+    "paper_section": "CDP",
     "keyword_tags": [
       "Pedagogy",
       "teaching methods"
@@ -2829,7 +2829,7 @@
       "C": "atlas",
       "D": "globe"
     },
-    "section": "ENGLISH",
+    "section": "SOCIAL_STUDIES",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0037",
@@ -2838,7 +2838,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 65,
-    "paper_section": "ENGLISH",
+    "paper_section": "SOCIAL_STUDIES",
     "keyword_tags": [
       "globe",
       "Geography (SS)"
@@ -2859,7 +2859,7 @@
       "C": "Part III",
       "D": "Part IV"
     },
-    "section": "SCIENCE",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0037",
@@ -2868,7 +2868,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 65,
-    "paper_section": "SCIENCE",
+    "paper_section": "EVS",
     "keyword_tags": [
       "constitution",
       "fundamental rights",
@@ -2895,7 +2895,7 @@
       "C": "73rd Amendment",
       "D": "86th Amendment"
     },
-    "section": "SCIENCE",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0037",
@@ -2904,7 +2904,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 65,
-    "paper_section": "SCIENCE",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -2951,7 +2951,7 @@
       "C": "The Concurrent List",
       "D": "The Residual Subjects"
     },
-    "section": "SCIENCE",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0038",
@@ -2960,7 +2960,7 @@
     "year": "2017",
     "subject": "Maths-Science",
     "page": 66,
-    "paper_section": "SCIENCE",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -3265,7 +3265,7 @@
       "C": "Medium",
       "D": "Interaction"
     },
-    "section": "CDP",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0042",
@@ -3274,7 +3274,7 @@
     "year": "2019",
     "subject": "Maths-Science",
     "page": 7,
-    "paper_section": "CDP",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "communication"
@@ -3959,7 +3959,7 @@
       "C": "",
       "D": ""
     },
-    "section": "SCIENCE",
+    "section": "MATHS",
     "is_fragment": true,
     "pdf_name": "UPTET-2019-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0050",
@@ -3968,7 +3968,7 @@
     "year": "2019",
     "subject": "Maths-Science",
     "page": 22,
-    "paper_section": "SCIENCE",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Number System",
       "fractions"
@@ -4163,7 +4163,7 @@
       "C": "Wind",
       "D": "River"
     },
-    "section": "MATHS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0054",
@@ -4172,7 +4172,7 @@
     "year": "2019",
     "subject": "Maths-Science",
     "page": 26,
-    "paper_section": "MATHS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "water",
       "Natural Resources (Science)"
@@ -4241,7 +4241,7 @@
       "C": "Road transport",
       "D": "Air transport"
     },
-    "section": "MATHS",
+    "section": "SOCIAL_STUDIES",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0055",
@@ -4250,7 +4250,7 @@
     "year": "2019",
     "subject": "Maths-Science",
     "page": 27,
-    "paper_section": "MATHS",
+    "paper_section": "SOCIAL_STUDIES",
     "keyword_tags": [
       "transport",
       "air",
@@ -4423,7 +4423,7 @@
       "C": "The Estimate Committee",
       "D": "The Committee on Public Undertakings"
     },
-    "section": "MATHS",
+    "section": "SOCIAL_STUDIES",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0056",
@@ -4432,7 +4432,7 @@
     "year": "2019",
     "subject": "Maths-Science",
     "page": 28,
-    "paper_section": "MATHS",
+    "paper_section": "SOCIAL_STUDIES",
     "keyword_tags": [
       "parliament",
       "Civics"
@@ -4453,7 +4453,7 @@
       "C": "Gram Panchayat",
       "D": "Nagar Nigam"
     },
-    "section": "MATHS",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0056",
@@ -4462,7 +4462,7 @@
     "year": "2019",
     "subject": "Maths-Science",
     "page": 28,
-    "paper_section": "MATHS",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -4485,7 +4485,7 @@
       "C": "Local Bodies",
       "D": "States"
     },
-    "section": "MATHS",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0056",
@@ -4494,7 +4494,7 @@
     "year": "2019",
     "subject": "Maths-Science",
     "page": 28,
-    "paper_section": "MATHS",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -4517,7 +4517,7 @@
       "C": "In 1979",
       "D": "In 1976"
     },
-    "section": "MATHS",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Maths-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0056",
@@ -4526,7 +4526,7 @@
     "year": "2019",
     "subject": "Maths-Science",
     "page": 28,
-    "paper_section": "MATHS",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -5007,7 +5007,7 @@
       "C": "86th Amendment",
       "D": "52'd Amendment"
     },
-    "section": "CDP",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UP-TET-2019-Paper-I-English.pdf",
     "source_col_id": "col_0066",
@@ -5016,7 +5016,7 @@
     "year": "2019",
     "subject": "English",
     "page": 8,
-    "paper_section": "CDP",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -5159,7 +5159,7 @@
       "C": "Make adequate seating arrangements according requirement of the child",
       "D": "Teacher should encourage the children in the class questioning by students"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UP-TET-2019-Paper-I-English.pdf",
     "source_col_id": "col_0066",
@@ -5168,7 +5168,7 @@
     "year": "2019",
     "subject": "English",
     "page": 8,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Measurement",
       "time"
@@ -6297,7 +6297,7 @@
       "C": "Water hyacinth",
       "D": "Parthenium hysterophorus"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UP-TET-2019-Paper-I-English.pdf",
     "source_col_id": "col_0084",
@@ -6306,7 +6306,7 @@
     "year": "2019",
     "subject": "English",
     "page": 31,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "water",
       "Natural Resources (Science)"
@@ -6375,7 +6375,7 @@
       "C": "Rhizobium",
       "D": "Vibrio aquatic"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UP-TET-2019-Paper-I-English.pdf",
     "source_col_id": "col_0084",
@@ -6384,7 +6384,7 @@
     "year": "2019",
     "subject": "English",
     "page": 31,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "soil",
       "Natural Resources (Science)"
@@ -6405,7 +6405,7 @@
       "C": "C-DNA",
       "D": "Z-DNA"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UP-TET-2019-Paper-I-English.pdf",
     "source_col_id": "col_0085",
@@ -6414,7 +6414,7 @@
     "year": "2019",
     "subject": "English",
     "page": 32,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "cell",
       "Living World (Science)"
@@ -7121,7 +7121,7 @@
       "C": "c+a",
       "D": "a+b+c"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0096",
@@ -7130,7 +7130,7 @@
     "year": "2013",
     "subject": "English",
     "page": 20,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Geometry",
       "triangle"
@@ -7175,7 +7175,7 @@
       "C": "unknown",
       "D": "unknown"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0097",
@@ -7184,7 +7184,7 @@
     "year": "2013",
     "subject": "English",
     "page": 21,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [],
     "all_tags": [],
     "is_complete": true
@@ -7199,7 +7199,7 @@
       "C": "12",
       "D": "16"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0097",
@@ -7208,7 +7208,7 @@
     "year": "2013",
     "subject": "English",
     "page": 21,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [],
     "all_tags": [],
     "is_complete": true
@@ -7223,7 +7223,7 @@
       "C": "6887 + 47:2",
       "D": "68a) 47a2 + 6a / 6"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0097",
@@ -7232,7 +7232,7 @@
     "year": "2013",
     "subject": "English",
     "page": 21,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "variables",
       "Algebra"
@@ -7253,7 +7253,7 @@
       "C": "6000",
       "D": "25000 cm2"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0098",
@@ -7262,7 +7262,7 @@
     "year": "2013",
     "subject": "English",
     "page": 22,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Geometry",
       "Advanced Geometry",
@@ -7287,7 +7287,7 @@
       "C": "15:16",
       "D": "23:64"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0098",
@@ -7296,7 +7296,7 @@
     "year": "2013",
     "subject": "English",
     "page": 22,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Advanced Geometry",
       "ratio",
@@ -7345,7 +7345,7 @@
       "C": "AD = CD",
       "D": "AD = 2CD"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0098",
@@ -7354,7 +7354,7 @@
     "year": "2013",
     "subject": "English",
     "page": 22,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Geometry",
       "triangle",
@@ -7425,7 +7425,7 @@
       "C": ".J#",
       "D": "H and YH"
     },
-    "section": "CDP",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0099",
@@ -7434,7 +7434,7 @@
     "year": "2013",
     "subject": "English",
     "page": 23,
-    "paper_section": "CDP",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "water",
       "Natural Resources (Science)"
@@ -7455,7 +7455,7 @@
       "C": "unknown",
       "D": "unknown"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0099",
@@ -7464,7 +7464,7 @@
     "year": "2013",
     "subject": "English",
     "page": 23,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Number System",
       "decimal"
@@ -7653,7 +7653,7 @@
       "C": "",
       "D": ""
     },
-    "section": "EVS",
+    "section": "MATHS",
     "is_fragment": true,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0102",
@@ -7662,7 +7662,7 @@
     "year": "2013",
     "subject": "English",
     "page": 26,
-    "paper_section": "EVS",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Measurement",
       "weight"
@@ -7755,7 +7755,7 @@
       "C": "Powers of Election Commission",
       "D": "Panchayati Raj System"
     },
-    "section": "MATHS",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0103",
@@ -7764,7 +7764,7 @@
     "year": "2013",
     "subject": "English",
     "page": 27,
-    "paper_section": "MATHS",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -8123,7 +8123,7 @@
       "C": "Ganga- Yamuria areas",
       "D": "Eastem India"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-II-English.pdf",
     "source_col_id": "col_0108",
@@ -8132,7 +8132,7 @@
     "year": "2013",
     "subject": "English",
     "page": 32,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "soil",
       "Natural Resources (Science)"
@@ -8201,7 +8201,7 @@
       "C": "Africa",
       "D": "Sri Lanka"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-social-science-2016-Paper.pdf",
     "source_col_id": "col_0109",
@@ -8210,7 +8210,7 @@
     "year": "2016",
     "subject": "Social-Science",
     "page": 1,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Geography",
       "mountains"
@@ -8279,7 +8279,7 @@
       "C": "Black soil",
       "D": "Laterite soil"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-social-science-2016-Paper.pdf",
     "source_col_id": "col_0109",
@@ -8288,7 +8288,7 @@
     "year": "2016",
     "subject": "Social-Science",
     "page": 1,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "soil",
       "Natural Resources (Science)"
@@ -8405,7 +8405,7 @@
       "C": "Solar Bagh",
       "D": "Casse"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-social-science-2016-Paper.pdf",
     "source_col_id": "col_0109",
@@ -8414,7 +8414,7 @@
     "year": "2016",
     "subject": "Social-Science",
     "page": 1,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -8437,7 +8437,7 @@
       "C": "Parliament",
       "D": "Supreme Court"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-social-science-2016-Paper.pdf",
     "source_col_id": "col_0110",
@@ -8446,7 +8446,7 @@
     "year": "2016",
     "subject": "Social-Science",
     "page": 3,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "parliament",
       "constitution",
@@ -8473,7 +8473,7 @@
       "C": "Vitamin E",
       "D": "Vitamin C"
     },
-    "section": "CDP",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-social-science-2016-Paper.pdf",
     "source_col_id": "col_0114",
@@ -8482,7 +8482,7 @@
     "year": "2016",
     "subject": "Social-Science",
     "page": 7,
-    "paper_section": "CDP",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "water",
       "Natural Resources (Science)"
@@ -8622,7 +8622,7 @@
       "B": "the length of figure",
       "C": "the circle of figure."
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-social-science-2016-Paper.pdf",
     "source_col_id": "col_0114",
@@ -8631,7 +8631,7 @@
     "year": "2016",
     "subject": "Social-Science",
     "page": 7,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Geometry",
       "circle"
@@ -8676,7 +8676,7 @@
       "C": "Hatching",
       "D": "Cherasquero"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-social-science-2016-Paper.pdf",
     "source_col_id": "col_0114",
@@ -8685,7 +8685,7 @@
     "year": "2016",
     "subject": "Social-Science",
     "page": 7,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "light",
       "Physics Concepts"
@@ -9276,7 +9276,7 @@
       "C": "Ie have holiday",
       "D": "Contract in an hour s time"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2013-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0123",
@@ -9285,7 +9285,7 @@
     "year": "2013",
     "subject": "English",
     "page": 11,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Measurement",
       "time"
@@ -9708,7 +9708,7 @@
       "C": "Dysphasia",
       "D": "Dysgraphia"
     },
-    "section": "CDP",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0128",
@@ -9717,7 +9717,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 5,
-    "paper_section": "CDP",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "communication"
@@ -10098,7 +10098,7 @@
       "C": "",
       "D": ""
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": true,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0138",
@@ -10107,7 +10107,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 22,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Number System",
       "fractions"
@@ -10176,7 +10176,7 @@
       "C": "A musical note",
       "D": "A musical instrument"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0138",
@@ -10185,7 +10185,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 22,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Physics Concepts",
       "sound"
@@ -10206,7 +10206,7 @@
       "C": "momentum",
       "D": ""
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0138",
@@ -10215,7 +10215,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 22,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "conservation",
       "Natural Resources (Science)"
@@ -10284,7 +10284,7 @@
       "C": "Joule",
       "D": "Calorie"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0139",
@@ -10293,7 +10293,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 23,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "heat",
       "Physics Concepts"
@@ -10314,7 +10314,7 @@
       "C": "neither longitudinal nor transverse",
       "D": "only longitudinal"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0139",
@@ -10323,7 +10323,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 23,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Physics Concepts",
       "sound"
@@ -10368,7 +10368,7 @@
       "C": "Vacuum",
       "D": "Water"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0139",
@@ -10377,7 +10377,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 23,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "air",
       "Physics Concepts",
@@ -10618,7 +10618,7 @@
       "C": "Gram Panchayat",
       "D": "Nagar Nigam"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0144",
@@ -10627,7 +10627,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 28,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -10650,7 +10650,7 @@
       "C": "Local Bodies",
       "D": "States"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0144",
@@ -10659,7 +10659,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 28,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -10682,7 +10682,7 @@
       "C": "In 1979",
       "D": "In 1976"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0144",
@@ -10691,7 +10691,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 28,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -10762,7 +10762,7 @@
       "C": "Night",
       "D": "Morning time"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0145",
@@ -10771,7 +10771,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 29,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Measurement",
       "time"
@@ -10792,7 +10792,7 @@
       "C": "",
       "D": ""
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0145",
@@ -10801,7 +10801,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 29,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "ratio",
       "soil",
@@ -10826,7 +10826,7 @@
       "C": "Soil groups",
       "D": "Soil aggregates"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0145",
@@ -10835,7 +10835,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 29,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "soil",
       "Natural Resources (Science)"
@@ -10856,7 +10856,7 @@
       "C": "When the thread is clogged in the shuttle",
       "D": "Lack of oiling and cleaning"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0145",
@@ -10865,7 +10865,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 29,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "pressure",
       "Physics Concepts"
@@ -10982,7 +10982,7 @@
       "C": "First Earth Summit Report",
       "D": "Human Development Report"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0146",
@@ -10991,7 +10991,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 30,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Measurement",
       "time"
@@ -11036,7 +11036,7 @@
       "C": "3",
       "D": "4"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2019-Paper-2-Social-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0146",
@@ -11045,7 +11045,7 @@
     "year": "2019",
     "subject": "Social-Science",
     "page": 30,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "conservation",
       "Natural Resources (Science)"
@@ -11144,7 +11144,7 @@
       "C": "Median",
       "D": "Standard Dewiation"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0150",
@@ -11153,7 +11153,7 @@
     "year": "2016",
     "subject": "English",
     "page": 5,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Data & Statistics",
       "median",
@@ -11970,7 +11970,7 @@
       "C": "Rhinoceros",
       "D": "Lion"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0162",
@@ -11979,7 +11979,7 @@
     "year": "2016",
     "subject": "English",
     "page": 22,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "conservation",
       "Living World",
@@ -12120,7 +12120,7 @@
       "C": "Geological cycles",
       "D": "Geochemical"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0162",
@@ -12129,7 +12129,7 @@
     "year": "2016",
     "subject": "English",
     "page": 22,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Living World (Science)",
       "ecosystem"
@@ -12150,7 +12150,7 @@
       "C": "Hydrogen",
       "D": "Coal"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0162",
@@ -12159,7 +12159,7 @@
     "year": "2016",
     "subject": "English",
     "page": 22,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "coal",
       "Natural Resources (Science)"
@@ -12252,7 +12252,7 @@
       "C": "water temperature",
       "D": ""
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0163",
@@ -12261,7 +12261,7 @@
     "year": "2016",
     "subject": "English",
     "page": 23,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "water",
       "Natural Resources (Science)"
@@ -12402,7 +12402,7 @@
       "C": "",
       "D": ""
     },
-    "section": "EVS",
+    "section": "CDP",
     "is_fragment": true,
     "pdf_name": "UPTET-2016-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0163",
@@ -12411,7 +12411,7 @@
     "year": "2016",
     "subject": "English",
     "page": 23,
-    "paper_section": "EVS",
+    "paper_section": "CDP",
     "keyword_tags": [
       "environment",
       "Child Development"
@@ -12884,7 +12884,7 @@
       "C": "divide",
       "D": "force"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UP-TET-23-Jan-2022-Paper-I-English.pdf",
     "source_col_id": "col_0172",
@@ -12893,7 +12893,7 @@
     "year": "2022",
     "subject": "English",
     "page": 10,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "force",
       "Physics Concepts"
@@ -13082,7 +13082,7 @@
       "C": "Unless",
       "D": "Neither tiring"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UP-TET-23-Jan-2022-Paper-I-English.pdf",
     "source_col_id": "col_0173",
@@ -13091,7 +13091,7 @@
     "year": "2022",
     "subject": "English",
     "page": 10,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "electricity",
       "Physics Concepts"
@@ -13822,7 +13822,7 @@
       "C": "differentiates new learning from old learning",
       "D": "creates interest in learning among young learners"
     },
-    "section": "ENGLISH",
+    "section": "CDP",
     "is_fragment": false,
     "pdf_name": "UPTET-2018-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0184",
@@ -13831,7 +13831,7 @@
     "year": "2018",
     "subject": "Maths-Science",
     "page": 11,
-    "paper_section": "ENGLISH",
+    "paper_section": "CDP",
     "keyword_tags": [
       "Pedagogy",
       "motivation"
@@ -14284,7 +14284,7 @@
       "C": "copper",
       "D": "iron"
     },
-    "section": "MATHS",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2018-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0190",
@@ -14293,7 +14293,7 @@
     "year": "2018",
     "subject": "Maths-Science",
     "page": 20,
-    "paper_section": "MATHS",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Living World",
       "plants"
@@ -14920,7 +14920,7 @@
       "C": "psychological development",
       "D": "All of the above"
     },
-    "section": "MATHS",
+    "section": "CDP",
     "is_fragment": false,
     "pdf_name": "UPTET-2018-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0197",
@@ -14929,7 +14929,7 @@
     "year": "2018",
     "subject": "Maths-Science",
     "page": 27,
-    "paper_section": "MATHS",
+    "paper_section": "CDP",
     "keyword_tags": [
       "mental development",
       "Child Development",
@@ -15216,7 +15216,7 @@
       "C": "Shyamlal Gupta",
       "D": "Parshad'"
     },
-    "section": "SCIENCE",
+    "section": "SOCIAL_STUDIES",
     "is_fragment": false,
     "pdf_name": "UPTET-2018-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0202",
@@ -15225,7 +15225,7 @@
     "year": "2018",
     "subject": "Maths-Science",
     "page": 32,
-    "paper_section": "SCIENCE",
+    "paper_section": "SOCIAL_STUDIES",
     "keyword_tags": [
       "History",
       "gupta"
@@ -15714,7 +15714,7 @@
       "C": "carbon dioxide from any source.",
       "D": "sinks the passage refers to"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0210",
@@ -15723,7 +15723,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 10,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Physics Concepts",
       "heat"
@@ -15864,7 +15864,7 @@
       "C": "John Ray",
       "D": "Theophrastus"
     },
-    "section": "MATHS",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0213",
@@ -15873,7 +15873,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 14,
-    "paper_section": "MATHS",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Living World",
       "animals"
@@ -15966,7 +15966,7 @@
       "C": "Mangrove plants",
       "D": "Shrubs"
     },
-    "section": "CDP",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0214",
@@ -15975,7 +15975,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 15,
-    "paper_section": "CDP",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Living World",
       "plants"
@@ -15996,7 +15996,7 @@
       "C": "Killer lymphocytes",
       "D": "Cell mediated T lymphocytes"
     },
-    "section": "CDP",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0214",
@@ -16005,7 +16005,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 15,
-    "paper_section": "CDP",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "cell",
       "Living World (Science)"
@@ -16026,7 +16026,7 @@
       "C": "Mangrove plants",
       "D": "Shrubs"
     },
-    "section": "MATHS",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0214",
@@ -16035,7 +16035,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 15,
-    "paper_section": "MATHS",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Living World",
       "plants"
@@ -16080,7 +16080,7 @@
       "C": "Cycas",
       "D": "Orchid"
     },
-    "section": "MATHS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0214",
@@ -16089,7 +16089,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 15,
-    "paper_section": "MATHS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Living World",
       "Natural Resources (Science)",
@@ -16114,7 +16114,7 @@
       "C": "6H2O + C12% + 6O2 -> 6CO2 + 6H2O",
       "D": "CH12% + 6O2 -> 6CO2 + 6H2O"
     },
-    "section": "MATHS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0214",
@@ -16123,7 +16123,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 15,
-    "paper_section": "MATHS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Living World (Science)",
       "photosynthesis"
@@ -16312,7 +16312,7 @@
       "C": "v = T * sqrt(T)",
       "D": "v = T"
     },
-    "section": "MATHS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0216",
@@ -16321,7 +16321,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 17,
-    "paper_section": "MATHS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "sound",
       "Physics Concepts"
@@ -16342,7 +16342,7 @@
       "C": "water to glass",
       "D": "glass to water"
     },
-    "section": "MATHS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0216",
@@ -16351,7 +16351,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 17,
-    "paper_section": "MATHS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "water",
       "Physics Concepts",
@@ -16402,7 +16402,7 @@
       "C": "I",
       "D": "V"
     },
-    "section": "MATHS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0216",
@@ -16411,7 +16411,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 17,
-    "paper_section": "MATHS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Physics Concepts",
       "heat"
@@ -16480,7 +16480,7 @@
       "C": "uncommon arms are always opposite rays.",
       "D": "(ii) is false."
     },
-    "section": "SCIENCE",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0220",
@@ -16489,7 +16489,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 21,
-    "paper_section": "SCIENCE",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Geometry",
       "angles"
@@ -16510,7 +16510,7 @@
       "C": "4)",
       "D": "None of these"
     },
-    "section": "SCIENCE",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0220",
@@ -16519,7 +16519,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 21,
-    "paper_section": "SCIENCE",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "triangle",
       "area",
@@ -16590,7 +16590,7 @@
       "C": "3) 10 (4) 1",
       "D": "6x5'+1"
     },
-    "section": "SCIENCE",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0221",
@@ -16599,7 +16599,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 22,
-    "paper_section": "SCIENCE",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "probability",
       "Data & Statistics"
@@ -16692,7 +16692,7 @@
       "C": "None of these",
       "D": ""
     },
-    "section": "SCIENCE",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0222",
@@ -16701,7 +16701,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 23,
-    "paper_section": "SCIENCE",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Data & Statistics",
       "median"
@@ -16800,7 +16800,7 @@
       "C": "",
       "D": ""
     },
-    "section": "SCIENCE",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-2016-Paper-2-Maths-Science-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0222",
@@ -16809,7 +16809,7 @@
     "year": "2016",
     "subject": "Maths-Science",
     "page": 23,
-    "paper_section": "SCIENCE",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Number System",
       "lcm",
@@ -17186,7 +17186,7 @@
       "C": "Unless",
       "D": "As"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0228",
@@ -17195,7 +17195,7 @@
     "year": "2017",
     "subject": "English",
     "page": 8,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "electricity",
       "Physics Concepts"
@@ -17288,7 +17288,7 @@
       "C": "Ring",
       "D": "Dang"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0229",
@@ -17297,7 +17297,7 @@
     "year": "2017",
     "subject": "English",
     "page": 9,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "sound",
       "Physics Concepts"
@@ -17366,7 +17366,7 @@
       "C": "never",
       "D": "initially"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0232",
@@ -17375,7 +17375,7 @@
     "year": "2017",
     "subject": "English",
     "page": 12,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "time",
       "Measurement"
@@ -17934,7 +17934,7 @@
       "C": "Central Water Commission",
       "D": "Survey of India"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0239",
@@ -17943,7 +17943,7 @@
     "year": "2017",
     "subject": "English",
     "page": 19,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Natural Resources (Science)",
       "water"
@@ -18118,7 +18118,7 @@
       "C": "DNA",
       "D": "RNA"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0240",
@@ -18127,7 +18127,7 @@
     "year": "2017",
     "subject": "English",
     "page": 20,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Living World (Science)",
       "ecosystem"
@@ -18172,7 +18172,7 @@
       "C": "Bihar",
       "D": "West Bengal"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0240",
@@ -18181,7 +18181,7 @@
     "year": "2017",
     "subject": "English",
     "page": 20,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Natural Resources (Science)",
       "water"
@@ -18298,7 +18298,7 @@
       "C": "ungi",
       "D": "Phosphorus"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0244",
@@ -18307,7 +18307,7 @@
     "year": "2017",
     "subject": "English",
     "page": 24,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Natural Resources (Science)",
       "soil"
@@ -18352,7 +18352,7 @@
       "C": "World Wildlife Fund",
       "D": "World Watch Fund"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0244",
@@ -18361,7 +18361,7 @@
     "year": "2017",
     "subject": "English",
     "page": 24,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "air",
       "Natural Resources (Science)"
@@ -18568,7 +18568,7 @@
       "C": "situation in which individuals are superior to animals",
       "D": "the perception of different parts of the situation"
     },
-    "section": "CDP",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0248",
@@ -18577,7 +18577,7 @@
     "year": "2018",
     "subject": "English",
     "page": 6,
-    "paper_section": "CDP",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Living World",
       "animals"
@@ -18676,7 +18676,7 @@
       "C": "lack of capacity building",
       "D": "sensitization"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0249",
@@ -18685,7 +18685,7 @@
     "year": "2018",
     "subject": "English",
     "page": 7,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "capacity",
       "Measurement"
@@ -18808,7 +18808,7 @@
       "C": "Personal",
       "D": "Behaviour modification"
     },
-    "section": "CDP",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0251",
@@ -18817,7 +18817,7 @@
     "year": "2018",
     "subject": "English",
     "page": 9,
-    "paper_section": "CDP",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "family"
@@ -19239,7 +19239,7 @@
       "C": "requested him to come in time",
       "D": "He was hit badly"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0257",
@@ -19248,7 +19248,7 @@
     "year": "2018",
     "subject": "English",
     "page": 22,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "time",
       "Measurement"
@@ -19629,7 +19629,7 @@
       "C": "Class",
       "D": "Water"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0260",
@@ -19638,7 +19638,7 @@
     "year": "2018",
     "subject": "English",
     "page": 25,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "air",
       "Natural Resources (Science)",
@@ -19685,7 +19685,7 @@
       "C": "They are very gentle people",
       "D": ""
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0262",
@@ -19694,7 +19694,7 @@
     "year": "2018",
     "subject": "English",
     "page": 27,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "time",
       "Measurement"
@@ -20411,7 +20411,7 @@
       "C": "Producers >Consumers >Decomposers",
       "D": "Consumers >Producers >Decomposers"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0274",
@@ -20420,7 +20420,7 @@
     "year": "2018",
     "subject": "English",
     "page": 52,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Living World (Science)",
       "ecosystem"
@@ -20549,7 +20549,7 @@
       "C": "freshwater",
       "D": "tap water"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0275",
@@ -20558,7 +20558,7 @@
     "year": "2018",
     "subject": "English",
     "page": 54,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Natural Resources (Science)",
       "water"
@@ -20603,7 +20603,7 @@
       "C": "3rd June",
       "D": "11th"
     },
-    "section": "EVS",
+    "section": "CDP",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0276",
@@ -20612,7 +20612,7 @@
     "year": "2018",
     "subject": "English",
     "page": 56,
-    "paper_section": "EVS",
+    "paper_section": "CDP",
     "keyword_tags": [
       "environment",
       "Child Development"
@@ -20681,7 +20681,7 @@
       "C": "Carbon dioxide",
       "D": "Oxygen"
     },
-    "section": "EVS",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Nov-2018-Paper-1-Hindi-English_Sanskrit.pdf",
     "source_col_id": "col_0276",
@@ -20690,7 +20690,7 @@
     "year": "2018",
     "subject": "English",
     "page": 56,
-    "paper_section": "EVS",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "plants",
       "water",
@@ -20965,7 +20965,7 @@
       "C": "10",
       "D": "9.5"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0281",
@@ -20974,7 +20974,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 5,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Data & Statistics",
       "median"
@@ -21177,7 +21177,7 @@
       "C": "geometr y",
       "D": "probability"
     },
-    "section": "CDP",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0282",
@@ -21186,7 +21186,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 6,
-    "paper_section": "CDP",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "probability",
       "Data & Statistics"
@@ -21429,7 +21429,7 @@
       "C": "Article 45",
       "D": "Article 21A"
     },
-    "section": "CDP",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0288",
@@ -21438,7 +21438,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 12,
-    "paper_section": "CDP",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -21803,7 +21803,7 @@
       "C": "purer",
       "D": "precious"
     },
-    "section": "ENGLISH",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0292",
@@ -21812,7 +21812,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 22,
-    "paper_section": "ENGLISH",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Natural Resources (Science)",
       "water"
@@ -22097,7 +22097,7 @@
       "C": "Four hours and five minutes",
       "D": "half an hour"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0294",
@@ -22106,7 +22106,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 24,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "time",
       "Measurement"
@@ -22127,7 +22127,7 @@
       "C": "The work consumes all the time spend and day",
       "D": "The work needs additional time"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0294",
@@ -22136,7 +22136,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 24,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "time",
       "Measurement"
@@ -22181,7 +22181,7 @@
       "C": "A man of leisure",
       "D": "An exhausted person"
     },
-    "section": "ENGLISH",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0295",
@@ -22190,7 +22190,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 25,
-    "paper_section": "ENGLISH",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "time",
       "Measurement"
@@ -22211,7 +22211,7 @@
       "C": "25",
       "D": "26"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0298",
@@ -22220,7 +22220,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 28,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Data & Statistics",
       "mode"
@@ -22265,7 +22265,7 @@
       "C": "16",
       "D": "24"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0298",
@@ -22274,7 +22274,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 28,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "ratio",
       "Arithmetic"
@@ -22367,7 +22367,7 @@
       "C": "223",
       "D": ""
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0299",
@@ -22376,7 +22376,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 29,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Number System",
       "hcf",
@@ -22423,7 +22423,7 @@
       "C": "-21",
       "D": "15"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0299",
@@ -22432,7 +22432,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 29,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "ratio",
       "Arithmetic"
@@ -22453,7 +22453,7 @@
       "C": "5 : 8",
       "D": "1 : 2"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0300",
@@ -22462,7 +22462,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 30,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "ratio",
       "Arithmetic"
@@ -22507,7 +22507,7 @@
       "C": "68 cm",
       "D": "52 cm"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0300",
@@ -22516,7 +22516,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 30,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "perimeter",
       "Geometry"
@@ -22537,7 +22537,7 @@
       "C": "3.75",
       "D": "4.25"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0300",
@@ -22546,7 +22546,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 30,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Data & Statistics",
       "mean"
@@ -22567,7 +22567,7 @@
       "C": "2464 cm2",
       "D": "616"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0300",
@@ -22576,7 +22576,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 30,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Advanced Geometry",
       "volume"
@@ -22597,7 +22597,7 @@
       "C": "charge",
       "D": "mass"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0304",
@@ -22606,7 +22606,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 34,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Natural Resources (Science)",
       "conservation"
@@ -22627,7 +22627,7 @@
       "C": "15",
       "D": "11"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "MATHS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0304",
@@ -22636,7 +22636,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 34,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "MATHS",
     "keyword_tags": [
       "Number System",
       "decimal"
@@ -22657,7 +22657,7 @@
       "C": "Paraffin wax",
       "D": "lubricating oil"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0304",
@@ -22666,7 +22666,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 34,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Natural Resources (Science)",
       "petroleum"
@@ -22687,7 +22687,7 @@
       "C": "Cu",
       "D": "Ca"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0304",
@@ -22696,7 +22696,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 34,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "Food & Materials",
       "acids"
@@ -22885,7 +22885,7 @@
       "C": "Smoke",
       "D": "Jelly"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0305",
@@ -22894,7 +22894,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 35,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "air",
       "Natural Resources (Science)"
@@ -23043,7 +23043,7 @@
       "C": "glucose",
       "D": "chlorophyll"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "SCIENCE",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0306",
@@ -23052,7 +23052,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 36,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "SCIENCE",
     "keyword_tags": [
       "water",
       "Natural Resources (Science)",
@@ -23629,7 +23629,7 @@
       "C": "teaching technology",
       "D": "None of the above"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "CDP",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0317",
@@ -23638,7 +23638,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 65,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "CDP",
     "keyword_tags": [
       "Pedagogy",
       "teaching methods"
@@ -23659,7 +23659,7 @@
       "C": "globe",
       "D": "chart"
     },
-    "section": "ENGLISH",
+    "section": "SOCIAL_STUDIES",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0317",
@@ -23668,7 +23668,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 65,
-    "paper_section": "ENGLISH",
+    "paper_section": "SOCIAL_STUDIES",
     "keyword_tags": [
       "globe",
       "Geography (SS)"
@@ -23689,7 +23689,7 @@
       "C": "Part III",
       "D": "Part IV"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0317",
@@ -23698,7 +23698,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 65,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "constitution",
       "Civics",
@@ -23725,7 +23725,7 @@
       "C": "73rd Amendment",
       "D": "86th Amendment"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0317",
@@ -23734,7 +23734,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 65,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
@@ -23781,7 +23781,7 @@
       "C": "The Concurrent List",
       "D": "The Residual Subjects"
     },
-    "section": "SOCIAL_STUDIES",
+    "section": "EVS",
     "is_fragment": false,
     "pdf_name": "UPTET-Oct-2017-Paper-2-Social-Science-Hindi-English_Sanskrit-English.pdf",
     "source_col_id": "col_0318",
@@ -23790,7 +23790,7 @@
     "year": "2017",
     "subject": "Social-Science",
     "page": 66,
-    "paper_section": "SOCIAL_STUDIES",
+    "paper_section": "EVS",
     "keyword_tags": [
       "Society",
       "History",
