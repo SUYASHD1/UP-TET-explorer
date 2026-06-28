@@ -51,8 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     bloom_level: q.paper || 'Paper 1'
                 };
                 
-                // Map exam to subject for the "All Subjects" filter
-                q.exam = q.subject || 'General';
+                // Map exam to organization
+                q.exam = q.exam || 'General';
+                
+                // Map source_file to test_set_title for dropdown filtering
+                q.source_file = q.test_set_title || 'General Set';
                 
                 // Map number to id
                 q.number = q.id;

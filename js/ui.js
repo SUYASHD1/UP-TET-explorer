@@ -764,7 +764,7 @@ export function analyzeDataset() {
     const bloomTabContainer = document.getElementById('bloom-tabs-container');
     if (bloomTabContainer) {
         bloomTabContainer.innerHTML = `
-            <button class="bloom-tab ${stateRef.selectedBloom === 'all' ? 'active' : ''}" onclick="filterByBloom('all')" id="bloom-tab-all">All Cognitive Levels</button>
+            <button class="bloom-tab ${stateRef.selectedBloom === 'all' ? 'active' : ''}" onclick="filterByBloom('all')" id="bloom-tab-all">All Papers</button>
         `;
         Array.from(stateRef.bloomLevels).sort().forEach(bl => {
             const tab = document.createElement('button');

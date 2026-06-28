@@ -35,7 +35,7 @@ export const CONFIGS = {
         gistFile: 'uptet_progress.json',
         hasExamFilter: true,
         hasYearFilter: true,
-        hasSourceFilter: false,
+        hasSourceFilter: true,
         getSignature: (q) => q.signature || (q.id ? q.id.toString() : ''),
         renderHeaderBadge: (q) => `${q.exam} | ${q.metadata ? q.metadata.bloom_level : ''} (Q${q.number}) | Year ${q.year}`,
         getQuestionText: (q) => escapeHTML(q.clean_text || q.text),
